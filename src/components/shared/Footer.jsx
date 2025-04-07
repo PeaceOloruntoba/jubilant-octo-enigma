@@ -3,7 +3,7 @@ import { footerLogo } from "../../assets";
 
 export default function Footer() {
   return (
-    <div className="grid lg:grid-cols-5 p-4 md:p-8 gap-2">
+    <div className="grid lg:grid-cols-5 p-4 md:p-8 gap-2 bg-white dark:bg-black text-black dark:text-white">
       <div className="flex items-center">
         <img src={footerLogo} alt="" />
       </div>

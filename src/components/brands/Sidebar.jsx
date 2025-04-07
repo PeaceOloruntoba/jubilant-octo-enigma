@@ -14,9 +14,9 @@ export default function Sidebar({ expanded, setExpanded }) {
     <aside
       className={`h-screen fixed ${
         expanded ? "w-72" : "w-20"
-      } transition-all duration-500 bg-white shadow-lg`}
+      } transition-all duration-500  bg-white dark:bg-black text-black dark:text-white shadow-lg`}
     >
-      <nav className="h-full flex flex-col bg-white border-r shadow-sm">
+      <nav className="h-full flex flex-col  bg-white dark:bg-black text-black dark:text-white border-r shadow-sm">
         <div className="p-4 pb-2 flex items-center justify-between">
           <img
             src={expanded ? logo : logoIcon}
