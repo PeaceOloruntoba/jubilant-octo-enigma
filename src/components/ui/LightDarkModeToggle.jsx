@@ -30,7 +30,7 @@ const LightDarkModeToggle = () => {
     <button
       onClick={toggleDarkMode}
       aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-      className="focus:outline-none transition-colors duration-300"
+      className="focus:outline-none transition-colors duration-300 bg-gray-200 rounded-full p-2 dark:bg-gray-800 items-center flex justify-center"
     >
       {darkMode ? (
         <svg
