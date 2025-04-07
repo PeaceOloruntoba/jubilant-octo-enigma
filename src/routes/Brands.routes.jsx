@@ -1,5 +1,5 @@
 import Dashboard from "../pages/Dashboard";
-import HomePage from "../pages/Homepage";
+// import HomePage from "../pages/Homepage";
 import Insights from "../pages/Insights";
 import NotFound from "../pages/NotFound";
 

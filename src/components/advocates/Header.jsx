@@ -13,7 +13,7 @@ export default function Header() {
       <div className="flex items-center gap-2">
         <img src={loremLogo} alt="" />
         <div className="flex flex-col">
-          <span className="font-bold text-2xl">Lorem Ipsum</span>
+          <span className="font-bold text-2xl">AdLorem Ipsum</span>
           <span className="text-lg">Business</span>
         </div>
         <div>
