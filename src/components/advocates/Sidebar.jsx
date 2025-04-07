@@ -45,7 +45,7 @@ export default function Sidebar({ expanded, setExpanded }) {
           <SidebarContext.Provider value={{ expanded }}>
             <ul className="px-3 py-6 flex flex-col gap-4">
               <SidebarItem to="/advocates/guidelines" text="Market!N Guidelines" icon="🏠" />
-              <SidebarItem to="/advocates/notifcations" text="Notifications" icon="📊" />
+              <SidebarItem to="/advocates/notifications" text="Notifications" icon="📊" />
               <SidebarItem to="/advocates/settings" text="Settings" icon="💬" />
               <SidebarItem to="/advocates/support" text="Support" icon="🛒" />
             </ul>
@@ -81,7 +81,7 @@ export function SidebarItem({ to, icon, text }) {
 
   return (
     <li
-      className={`text-xl relative flex items-center font-medium rounded-full cursor-pointer transition-colors
+      className={`text-sm relative flex items-center font-medium rounded-full cursor-pointer transition-colors
       ${
         isActive
           ? "bg-secondary text-primary flex items-center justify-center w-fit p-3"
