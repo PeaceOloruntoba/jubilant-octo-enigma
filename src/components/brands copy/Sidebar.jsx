@@ -32,22 +32,22 @@ export default function Sidebar({ expanded, setExpanded }) {
         <div className="flex-1 pt-16">
           <SidebarContext.Provider value={{ expanded }}>
             <ul className="px-3 py-6 flex flex-col gap-4">
-              <SidebarItem to="/" text="Dashboard" icon="🏠" />
-              <SidebarItem to="/insights" text="Insights" icon="📊" />
-              <SidebarItem to="/chat" text="Chat" icon="💬" />
-              <SidebarItem to="/products" text="Products & Sales" icon="🛒" />
-              <SidebarItem to="/advocates" text="Advocates" icon="🤝" />
-              <SidebarItem to="/intelligence" text="Intelligence" icon="🧠" />
-              <SidebarItem to="/payouts" text="Payouts" icon="💰" />
+              <SidebarItem to="/advocates/" text="Dashboard" icon="🏠" />
+              <SidebarItem to="/advocates/insights" text="Insights" icon="📊" />
+              <SidebarItem to="/advocates/chat" text="Chat" icon="💬" />
+              <SidebarItem to="/advocates/products" text="Products & Sales" icon="🛒" />
+              <SidebarItem to="/advocates/advocates" text="Advocates" icon="🤝" />
+              <SidebarItem to="/advocates/intelligence" text="Intelligence" icon="🧠" />
+              <SidebarItem to="/advocates/payouts" text="Payouts" icon="💰" />
             </ul>
           </SidebarContext.Provider>
           <hr className="bg-secondary text-secondary"></hr>
           <SidebarContext.Provider value={{ expanded }}>
             <ul className="px-3 py-6 flex flex-col gap-4">
-              <SidebarItem to="/api-docs" text="API Documentation" icon="🏠" />
-              <SidebarItem to="/notifcations" text="Notifications" icon="📊" />
-              <SidebarItem to="/settings" text="Settings" icon="💬" />
-              <SidebarItem to="/support" text="Support" icon="🛒" />
+              <SidebarItem to="/advocates/api-docs" text="API Documentation" icon="🏠" />
+              <SidebarItem to="/advocates/notifcations" text="Notifications" icon="📊" />
+              <SidebarItem to="/advocates/settings" text="Settings" icon="💬" />
+              <SidebarItem to="/advocates/support" text="Support" icon="🛒" />
             </ul>
           </SidebarContext.Provider>
         </div>
