@@ -54,7 +54,7 @@ export default function Overview() {
 
   return (
     <div className="flex flex-col w-full gap-8">
-      <div className="flex items-center justify-between text-[#757474] text-lg">
+      <div className="flex items-center justify-between text-[#757474] text-lg bg-white dark:bg-black text-black dark:text-white">
         <span className="text-sectext text-[22px] font-[500]">Overview</span>
         <div className="flex items-center gap-4">
           <span>Last updated {loadedTime}</span>
