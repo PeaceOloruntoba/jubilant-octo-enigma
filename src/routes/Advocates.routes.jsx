@@ -1,7 +1,10 @@
-import Dashboard from "../pages/Dashboard";
-import HomePage from "../pages/Homepage";
-import Insights from "../pages/Insights";
+import Dashboard from "../pages/advocates/Dashboard.jsx"
+
+// import HomePage from "../pages/Homepage";
+import Insights from "../pages/advocates/Insights.jsx";
 import NotFound from "../pages/NotFound";
+
+import Inchat from "../pages/advocates/Inchat";
 
 export const AdvocatesRoutes = [
   {
@@ -10,7 +13,7 @@ export const AdvocatesRoutes = [
   },
   {
     path: "/advocates/chat",
-    element: <Dashboard />,
+    element: <Inchat/>,
   },
   {
     path: "/advocates/insights",

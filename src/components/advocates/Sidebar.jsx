@@ -33,19 +33,19 @@ export default function Sidebar({ expanded, setExpanded }) {
           <SidebarContext.Provider value={{ expanded }}>
             <ul className="px-3 py-6 flex flex-col gap-4">
               <SidebarItem to="/advocates/" text="Dashboard" icon="🏠" />
-              <SidebarItem to="/advocates/insights" text="Insights" icon="📊" />
-              <SidebarItem to="/advocates/chat" text="Chat" icon="💬" />
-              <SidebarItem to="/advocates/products" text="Products & Sales" icon="🛒" />
-              <SidebarItem to="/advocates/advocates" text="Advocates" icon="🤝" />
-              <SidebarItem to="/advocates/intelligence" text="Intelligence" icon="🧠" />
-              <SidebarItem to="/advocates/payouts" text="Payouts" icon="💰" />
+              <SidebarItem to="/advocates/insights" text="!NSights" icon="📊" />
+              <SidebarItem to="/advocates/chat" text="!NChat" icon="💬" />
+              <SidebarItem to="/advocates/brands" text="Brands & Campaigns" icon="🛒" />
+              <SidebarItem to="/advocates/ncademy" text="!Ncademy" icon="🤝" />
+              <SidebarItem to="/advocates/intelligence" text="!Ntelligence" icon="🧠" />
+              <SidebarItem to="/advocates/earnings" text="Earn!Ngs" icon="💰" />
             </ul>
           </SidebarContext.Provider>
           <hr className="bg-secondary text-secondary"></hr>
           <SidebarContext.Provider value={{ expanded }}>
             <ul className="px-3 py-6 flex flex-col gap-4">
-              <SidebarItem to="/advocates/api-docs" text="API Documentation" icon="🏠" />
-              <SidebarItem to="/advocates/notifcations" text="Notifications" icon="📊" />
+              <SidebarItem to="/advocates/guidelines" text="Market!N Guidelines" icon="🏠" />
+              <SidebarItem to="/advocates/notifications" text="Notifications" icon="📊" />
               <SidebarItem to="/advocates/settings" text="Settings" icon="💬" />
               <SidebarItem to="/advocates/support" text="Support" icon="🛒" />
             </ul>
@@ -81,7 +81,7 @@ export function SidebarItem({ to, icon, text }) {
 
   return (
     <li
-      className={`text-xl relative flex items-center font-medium rounded-full cursor-pointer transition-colors
+      className={`text-sm relative flex items-center font-medium rounded-full cursor-pointer transition-colors
       ${
         isActive
           ? "bg-secondary text-primary flex items-center justify-center w-fit p-3"

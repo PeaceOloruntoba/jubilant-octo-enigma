@@ -8,6 +8,7 @@ import { AdvocatesRoutes } from "./routes/Advocates.routes";
 import { BrandsRoutes } from "./routes/Brands.routes";
 import { AdminRoutes } from "./routes/Admin.routes";
 import NotFound from "./pages/NotFound";
+import AdvocateLayout from "./layouts/AdvocateLayout";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -20,7 +21,7 @@ export default function App() {
       element: <AppGuard />,
       children: [
         {
-          element: <RootLayout />,
+          element: <AdvocateLayout />,
           children: AdvocatesRoutes,
         },
       ],
