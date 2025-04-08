@@ -36,7 +36,7 @@ const Maintab = () => {
       </div>
 
       {/* Tab Content */}
-      <div>{activeTab === "brands" ? <Brands/> : <CampaignsPage />}</div>
+      <div>{activeTab === "brands" ? <Brands/> : ''}</div>
     </div>
   );
 };

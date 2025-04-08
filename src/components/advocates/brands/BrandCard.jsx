@@ -1,16 +1,11 @@
 import React from "react";
 import Button from "../../shared/Button";
-import { MoreVertical, ChevronRight, ChevronLeft } from "lucide-react";
+import { FaEllipsisV } from "react-icons/fa"; 
 
-// const brands = new Array(15).fill({
-//   name: "Lorem Ipsum",
-//   category: "Business",
-//   description:
-//     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-// });
+
 
 const BrandCard = ({ brand }) => (
-  <div className="bg-white rounded-xl shadow-md p-4 w-full max-w-sm flex flex-col gap-3 border">
+  <div className="bg-white rounded-xl shadow-md p-4 w-full max-w-md h-[400px] flex flex-col gap-3 border">
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-2">
         <div className="bg-blue-500 rounded-full w-6 h-6" />
@@ -19,7 +14,7 @@ const BrandCard = ({ brand }) => (
           <p className="text-xs text-gray-500">{brand.category}</p>
         </div>
       </div>
-      <MoreVertical className="w-4 h-4 text-gray-400" />
+      <FaEllipsisV className="w-4 h-4 text-gray-400" />
     </div>
 
     <div className="bg-gray-200 rounded-md h-32 flex items-center justify-center gap-4">
@@ -31,10 +26,10 @@ const BrandCard = ({ brand }) => (
     <p className="text-sm text-gray-600">{brand.description}</p>
 
     <div className="flex justify-between">
-      <Button variant="outline" className="text-sm">
+      <Button  className="text-sm ">
         View Profile
       </Button>
-      <Button variant="destructive" className="text-sm">
+      <Button variant="" className="">
         Join Campaign
       </Button>
     </div>

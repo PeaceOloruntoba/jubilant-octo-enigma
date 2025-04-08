@@ -1,4 +1,4 @@
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import {FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import BrandCard from "./BrandCard";
 
 const brands = new Array(15).fill({
@@ -17,15 +17,9 @@ const Brands = () => {
         </div>
   
         <p className="text-sm">Showing 1 of 15 Results</p>
-  
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {brands.slice(0, 3).map((brand, i) => (
-            <BrandCard key={i} brand={brand} />
-          ))}
-        </div>
-  
-        <div className="flex justify-center items-center gap-2">
-          <ChevronLeft className="w-4 h-4 text-gray-500 cursor-pointer" />
+
+        <div className="flex justify-center items-left gap-2">
+          <FaChevronLeft  className="w-4 h-4 text-gray-500 cursor-pointer" />
           {[1, 2, 3, 4, 5, "...", 15].map((num, i) => (
             <button
               key={i}
@@ -38,8 +32,16 @@ const Brands = () => {
               {num}
             </button>
           ))}
-          <ChevronRight className="w-4 h-4 text-gray-500 cursor-pointer" />
+          <FaChevronRight  className="w-4 h-4 text-gray-500 cursor-pointer" />
         </div>
+  
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {brands.slice(0, 6).map((brand, i) => (
+            <BrandCard key={i} brand={brand} />
+          ))}
+        </div>
+  
+        
       </div>
     );
   };

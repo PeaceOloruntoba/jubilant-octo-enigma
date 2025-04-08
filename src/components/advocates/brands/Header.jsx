@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Filter, Share2 } from "lucide-react";
-
+// import { Filter, Share2 } from "lucide-react";
+import { CiFilter } from "react-icons/ci";
+import { PiShareFatLight } from "react-icons/pi";
 
 const Header = () => {
   return (
@@ -16,10 +17,10 @@ const Header = () => {
         <div className="flex items-center gap-2 text-sm text-gray-500">
           <span>Last Updated: 14:23</span>
           <button className="border px-3 py-1 rounded-md hover:bg-gray-100 flex items-center gap-1">
-            <Filter size={16} /> Filter
+            <CiFilter size={16} /> Filter
           </button>
           <button className="border px-3 py-1 rounded-md hover:bg-gray-100 flex items-center gap-1">
-            <Share2 size={16} /> Share
+            <PiShareFatLight size={16} /> Share
           </button>
         </div>
       </div>
