@@ -1,11 +1,23 @@
 // Header.js
-import React from 'react';
-import { Icons } from './Icons';
+import React, {useState, useEffect} from "react";
+import { Icons } from "./Icons";
 
 const Header = ({ onClear, onNew }) => {
+  const [loadedTime, setLoadedTime] = useState("");
+
+  useEffect(() => {
+    const now = new Date();
+    const formattedTime = now.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    }); // Format time as HH:MM:SS
+    setLoadedTime(formattedTime);
+  }, []); // Runs once when the component mounts
+
+
   return (
     <div className="flex items-center justify-between px-4 py-2 border-b text-sm">
-      <span className="text-gray-500">Last Updated: 14:23</span>
+      <span className="text-gray-500">Last Updated: {loadedTime}</span>
       <div className="flex gap-2">
         <button
           onClick={onClear}

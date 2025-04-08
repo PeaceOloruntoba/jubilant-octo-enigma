@@ -14,7 +14,7 @@ const InputBox = ({ onSend }) => {
 
   return (
     <div className="w-full px-4 py-2">
-      <div className="flex items-center w-full max-w-4xl mx-auto bg-white rounded-md shadow-sm">
+      <div className="flex items-center w-full max-w-4xl mx-auto bg-white border rounded-md shadow-sm">
         <input
           value={text}
           onChange={(e) => setText(e.target.value)}
