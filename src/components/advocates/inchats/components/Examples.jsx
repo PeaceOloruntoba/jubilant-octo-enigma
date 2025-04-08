@@ -8,7 +8,7 @@ const Examples = ({ onExampleClick }) => {
   );
 
   return (
-    <div className="p-8 text-center">
+    <div className="p-8 text-center bg-white dark:bg-black text-black dark:text-white">
       <Icons.ChatBubble className="mx-auto text-3xl" />
       <h2 className="text-lg font-semibold my-2">Examples</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
@@ -16,7 +16,7 @@ const Examples = ({ onExampleClick }) => {
           <button
             key={idx}
             onClick={() => onExampleClick(q)}
-            className="bg-white px-4 py-2 rounded shadow-sm hover:bg-gray-100"
+            className="bg-white dark:bg-white text-black dark:text-black px-4 py-2 rounded shadow-sm hover:bg-gray-100"
           >
             {q}
           </button>

@@ -119,8 +119,8 @@ export default function RevenueChart() {
     : 0;
 
   return (
-    <div className="w-full h-fit border border-gray-200 rounded-lg shadow-md bg-white">
-      <div className="flex justify-between items-center p-6">
+    <div className="w-full h-fit border border-gray-200 rounded-lg shadow-md  ">
+      <div className="flex justify-between items-center p-6 ">
         <div>
           <h2 className="text-[16px] font-medium">Revenue Over Time</h2>
         </div>

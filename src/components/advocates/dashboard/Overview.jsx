@@ -53,8 +53,8 @@ export default function Overview() {
   ];
 
   return (
-    <div className="flex flex-col w-full gap-8">
-      <div className="flex items-center justify-between text-[#757474] text-lg bg-white dark:bg-black text-black dark:text-white">
+    <div className="flex flex-col w-full gap-8 bg-white dark:bg-black text-black dark:text-white">
+      <div className="flex items-center justify-between text-[#757474] text-lg ">
         <span className="text-sectext text-[22px] font-[500]">Overview</span>
         <div className="flex items-center gap-4">
           <span>Last updated {loadedTime}</span>
@@ -98,7 +98,7 @@ export default function Overview() {
 
 function Card({ icon, name, value, percentage, upT }) {
   return (
-    <div className="border rounded-xl shadow flex flex-col w-full">
+    <div className="border rounded-xl shadow flex flex-col w-full bg-white dark:bg-black text-black dark:text-white">
       <div className="flex flex-col p-4 gap-2">
         <span className="border rounded-lg p-2 w-fit text-2xl">{icon}</span>
         <div className="flex items-end justify-between">
@@ -111,7 +111,7 @@ function Card({ icon, name, value, percentage, upT }) {
           </span>
         </div>
       </div>
-      <div className="bg-[#EBE8E8] p-4 flex items-center justify-between">
+      <div className="bg-[#EBE8E8] p-4 flex items-center justify-between text">
         <span
           className={`flex items-center ${
             upT ? "text-green-500" : "text-red-500"
@@ -126,7 +126,7 @@ function Card({ icon, name, value, percentage, upT }) {
           </span>
           {percentage}%
         </span>
-        <span>from last period</span>
+        <span className="">from last period</span>
       </div>
     </div>
   );

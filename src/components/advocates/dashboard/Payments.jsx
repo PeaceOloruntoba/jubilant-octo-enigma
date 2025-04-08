@@ -89,7 +89,7 @@ export default function Payments() {
 
   return (
     <div className="p-4">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between bg-white dark:bg-black text-black dark:text-white">
         <div className="flex flex-col">
           <span className="text-[22px] font-medium">Payments</span>
           <span className="text-[16px] text-[#9D9B9B]">Lorem ipsum dolor</span>
