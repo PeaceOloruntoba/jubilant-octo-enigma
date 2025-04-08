@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
-import { FiMessageSquare, FiRotateCw, FiPlus } from "react-icons/fi";
+import React from "react";
+import { useEffect, useState } from "react";
+import { FiMessageSquare, FiRotateCw, FiPlus, FiSend } from "react-icons/fi";
 
-const ChatHome = () => {
+const Inchats = () => {
   const [loadedTime, setLoadedTime] = useState("");
 
   useEffect(() => {
@@ -17,10 +18,12 @@ const ChatHome = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6 flex flex-col">
+    <div className=" bg-gray-50 p-6 flex flex-col">
       {/* Top Bar */}
       <div className="flex justify-end items-center gap-4 mb-10">
-        <span className="text-sm text-gray-500">Last Updated: {loadedTime}</span>
+        <span className="text-sm text-gray-500">
+          Last Updated: {loadedTime}
+        </span>
         <button className="flex items-center gap-1 px-3 py-1.5 border border-gray-300 rounded-md text-sm text-gray-700 hover:bg-gray-100">
           <FiRotateCw />
           Clear chat
@@ -47,8 +50,25 @@ const ChatHome = () => {
           ))}
         </div>
       </div>
+
+      {/* Input section */}
+      {/* Bottom Input Section */}
+      <div className="bg-gray-50 p-4 gap-4">
+        <div className="max-w-3xl mx-auto">
+          <div className="flex items-center bg-white px-4 py-3 rounded-xl shadow border border-gray-200">
+            <input
+              type="text"
+              placeholder="Let the magic begin, Ask a question"
+              className="flex-1 bg-transparent focus:outline-none text-sm text-gray-700"
+            />
+            <button className="text-gray-600 hover:text-black transition">
+              <FiSend size={18} />
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default ChatHome;
+export default Inchats;
