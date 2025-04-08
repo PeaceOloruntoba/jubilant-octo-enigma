@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../../shared/Button";
+import Button from "../../shared/Button";
 import { MoreVertical, ChevronRight, ChevronLeft } from "lucide-react";
 
 // const brands = new Array(15).fill({
@@ -43,4 +43,3 @@ const BrandCard = ({ brand }) => (
 
 
 export default BrandCard;
-

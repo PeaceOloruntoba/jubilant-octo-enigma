@@ -1,5 +1,5 @@
 import { ChevronRight, ChevronLeft } from "lucide-react";
-import BrandCard from "./components/BrandCard";
+import BrandCard from "./BrandCard";
 
 const brands = new Array(15).fill({
   name: "Lorem Ipsum",
