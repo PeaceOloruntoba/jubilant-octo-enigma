@@ -22,6 +22,7 @@ export default function Sidebar({ expanded, setExpanded }) {
             src={expanded ? logo : logoIcon}
             className="transition-all w-40"
           />
+         
           <button
             onClick={() => setExpanded((curr) => !curr)}
             className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 text-xl"
