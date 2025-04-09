@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Brands from "./Brands";
 // import CampaignsPage from "./CampaignsPage"; // 👈 create this later
 import Header from "./Header";
+import CampaignTable from "./CampaingTable";
 
 const Maintab = () => {
   const [activeTab, setActiveTab] = useState("brands");
@@ -36,7 +37,7 @@ const Maintab = () => {
       </div>
 
       {/* Tab Content */}
-      <div>{activeTab === "brands" ? <Brands/> : ''}</div>
+      <div>{activeTab === "brands" ? <Brands/> : <CampaignTable/>}</div>
     </div>
   );
 };
