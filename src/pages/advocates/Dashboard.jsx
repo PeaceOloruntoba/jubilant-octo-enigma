@@ -1,7 +1,10 @@
 import React from "react";
-import Overview from "../components/advocates/dashboard/Overview";
-import Revenue from "../components/advocates/dashboard/Revenue";
-import Payments from "../components/advocates/dashboard/Payments";
+
+import Overview from "../../components/brands/dashboard/Overview";
+import Revenue from "../../components/brands/dashboard/Revenue";
+import Payments from "../../components/brands/dashboard/Payments";
+
+
 
 export default function Dashboard() {
   return (

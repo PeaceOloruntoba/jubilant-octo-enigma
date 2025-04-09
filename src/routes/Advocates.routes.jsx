@@ -1,8 +1,13 @@
-import Dashboard from "../pages/Dashboard";
-import HomePage from "../pages/Homepage";
-import Insights from "../pages/Insights";
-import NotFound from "../pages/NotFound";
+import Dashboard from "../pages/advocates/Dashboard.jsx"
 
+// import HomePage from "../pages/Homepage";
+import Insights from "../pages/advocates/Insights.jsx";
+import NotFound from "../pages/NotFound";
+import Brands from "../pages/advocates/Brands.jsx";
+import Inchat from "../pages/advocates/Inchat";
+import BrandsprofilePage from "../pages/advocates/BrandsprofilePage.jsx";
+
+import Inacademy from "../pages/advocates/Inacademy.jsx";
 export const AdvocatesRoutes = [
   {
     path: "/advocates/",
@@ -10,12 +15,28 @@ export const AdvocatesRoutes = [
   },
   {
     path: "/advocates/chat",
-    element: <Dashboard />,
+    element: <Inchat/>,
   },
+
+  {
+    path: "/advocates/ncademy",
+    element: <Inacademy/>,
+  },
+
   {
     path: "/advocates/insights",
     element: <Insights />,
   },
+  {
+    path: "/advocates/brands",
+    element: <Brands/>,
+  },
+
+  {
+    path: "/advocates/brands/:brandId",
+    element: <BrandsprofilePage/>,
+  },
+
   {
     path: "/advocates/*",
     element: <NotFound />,
