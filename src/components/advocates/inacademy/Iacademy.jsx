@@ -6,7 +6,7 @@ import Header from './Header';
 
 
 
-export default function CourseCurriculum() {
+export default function Iacademy() {
  
 
   return (
