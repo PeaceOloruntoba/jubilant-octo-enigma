@@ -5,6 +5,7 @@ import Insights from "../pages/advocates/Insights.jsx";
 import NotFound from "../pages/NotFound";
 import Brands from "../pages/advocates/Brands.jsx";
 import Inchat from "../pages/advocates/Inchat";
+import BrandsprofilePage from "../pages/advocates/BrandsprofilePage.jsx";
 
 export const AdvocatesRoutes = [
   {
@@ -23,6 +24,12 @@ export const AdvocatesRoutes = [
     path: "/advocates/brands",
     element: <Brands/>,
   },
+
+  {
+    path: "/advocates/brands/:brandId",
+    element: <BrandsprofilePage/>,
+  },
+
   {
     path: "/advocates/*",
     element: <NotFound />,
