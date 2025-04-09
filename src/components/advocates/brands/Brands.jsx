@@ -18,7 +18,7 @@ const Brands = () => {
   
         <p className="text-sm">Showing 1 of 15 Results</p>
 
-        <div className="flex justify-center items-left gap-2">
+        <div className="flex justify-end items-center gap-2">
           <FaChevronLeft  className="w-4 h-4 text-gray-500 cursor-pointer" />
           {[1, 2, 3, 4, 5, "...", 15].map((num, i) => (
             <button
