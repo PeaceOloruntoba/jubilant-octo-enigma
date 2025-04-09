@@ -1,6 +1,7 @@
 import React from "react";
-import Button from "../../shared/Button";
+
 import { FaEllipsisV } from "react-icons/fa"; 
+import { FiExternalLink } from 'react-icons/fi';
 
 
 
@@ -25,13 +26,16 @@ const BrandCard = ({ brand }) => (
 
     <p className="text-sm text-gray-600">{brand.description}</p>
 
+    
+    
+
     <div className="flex justify-between">
-      <Button  className="text-sm ">
+      <button  className="text-sm border rounded-lg hover:bg-gray-100 p-2 flex items-center gap-2 "> <span><FiExternalLink/> </span>
         View Profile
-      </Button>
-      <Button variant="" className="">
+      </button>
+      <button className="text-white bg-red-600 rounded-lg hover:bg-red-700 p-2">
         Join Campaign
-      </Button>
+      </button>
     </div>
   </div>
 );
