@@ -1,39 +1,47 @@
+// 
+
+
 import React, { useEffect, useState } from "react";
 import { FaSortUp, FaSortDown } from "react-icons/fa";
 import { LuDownload } from "react-icons/lu";
 import { BsArrowsAngleExpand } from "react-icons/bs";
 import Button from "../../shared/Button";
 
+// Initial dummy data
 const initialData = [
   {
     id: 1,
-    advocates: "John Doe",
-    email: "john.doe@mail.com",
-    paymentMethod: "Paypal",
-    amount: 40.25,
-    date: "2021-10-20",
-    status: "Pending",
+    campaignId: "PID1001",
+    title: "product name",
+    duration: "5 Days",
+    brand: "lorem ipsum",
+    category: "finance",
+    commission: "40 percent",
+    status: "Active",
   },
   {
     id: 2,
-    advocates: "Jane Smith",
-    email: "jane.smith@mail.com",
-    paymentMethod: "Stripe",
-    amount: 85.5,
-    date: "2021-09-15",
-    status: "Successful",
+    campaignId: "PID1002",
+    title: "product name 2",
+    duration: "3 Days",
+    brand: "lorem ipsum",
+    category: "tech",
+    commission: "30 percent",
+    status: "Active",
   },
   {
     id: 3,
-    advocates: "Alex Brown",
-    email: "alex.brown@mail.com",
-    paymentMethod: "Bank Transfer",
-    amount: 120.0,
-    date: "2021-11-05",
+    campaignId: "PID1003",
+    title: "product name 3",
+    duration: "7 Days",
+    brand: "lorem ipsum",
+    category: "education",
+    commission: "50 percent",
     status: "Pending",
   },
 ];
 
+// Filter options
 const FILTER_OPTIONS = [
   { label: "Last 7 Days", value: "7d" },
   { label: "Last 30 Days", value: "30d" },
@@ -42,6 +50,17 @@ const FILTER_OPTIONS = [
   { label: "Last 1 Year", value: "1y" },
   { label: "All Time", value: "all" },
 ];
+
+// Mapping of column header to object keys
+const COLUMN_KEY_MAP = {
+  CAMPAIGNID: "campaignId",
+  TITLE: "title",
+  DURATION: "duration",
+  BRAND: "brand",
+  CATEGORY: "category",
+  "COMMISSION RATE": "commission",
+  STATUS: "status",
+};
 
 export default function CampaignTable() {
   const [selectedFilter, setSelectedFilter] = useState("30d");
@@ -63,24 +82,35 @@ export default function CampaignTable() {
     }
   };
 
-  const sortData = (key) => {
+  const sortData = (columnHeader) => {
+    const key = COLUMN_KEY_MAP[columnHeader];
+    if (!key) return;
+
     let direction = "asc";
     if (sortConfig.key === key && sortConfig.direction === "asc") {
       direction = "desc";
     }
 
     const sortedData = [...data].sort((a, b) => {
-      if (key === "amount") {
-        return direction === "asc" ? a.amount - b.amount : b.amount - a.amount;
+      const aVal = a[key];
+      const bVal = b[key];
+
+      // Special numeric logic for commission
+      if (key === "commission") {
+        const numA = parseFloat(aVal);
+        const numB = parseFloat(bVal);
+        return direction === "asc" ? numA - numB : numB - numA;
       }
-      if (key === "date") {
-        return direction === "asc"
-          ? new Date(a.date) - new Date(b.date)
-          : new Date(b.date) - new Date(a.date);
+
+      // General numeric logic (optional: id/duration if numeric)
+      if (!isNaN(aVal) && !isNaN(bVal)) {
+        return direction === "asc" ? aVal - bVal : bVal - aVal;
       }
+
+      // Default string comparison
       return direction === "asc"
-        ? a[key].localeCompare(b[key])
-        : b[key].localeCompare(a[key]);
+        ? String(aVal).localeCompare(String(bVal))
+        : String(bVal).localeCompare(String(aVal));
     });
 
     setData(sortedData);
@@ -88,7 +118,7 @@ export default function CampaignTable() {
   };
 
   return (
-    <div className="p-4 border rounded-lg  shadow">
+    <div className="p-4 border rounded-lg shadow">
       <div className="flex items-center justify-between bg-white dark:bg-black text-black dark:text-white ">
         <div className="flex flex-col">
           <span className="text-[22px] font-medium">All Campaigns</span>
@@ -117,8 +147,9 @@ export default function CampaignTable() {
           />
         </div>
       </div>
-      <table className="w-full border-collapse  rounded-lg">
-        <thead className="">
+
+      <table className="w-full border-collapse rounded-lg mt-4">
+        <thead>
           <tr className="border-b text-left">
             <th className="p-4">
               <input
@@ -127,22 +158,15 @@ export default function CampaignTable() {
                 checked={selectedRows.length === data.length}
               />
             </th>
-            {[
-              "advocates",
-              "email",
-              "paymentMethod",
-              "amount",
-              "date",
-              "status",
-            ].map((key) => (
+            {Object.keys(COLUMN_KEY_MAP).map((header) => (
               <th
-                key={key}
-                className="cursor-pointer"
-                onClick={() => sortData(key)}
+                key={header}
+                className="cursor-pointer p-4"
+                onClick={() => sortData(header)}
               >
                 <div className="flex items-center uppercase gap-2">
-                  {key.charAt(0) + key.slice(1)}
-                  {sortConfig.key === key ? (
+                  {header}
+                  {sortConfig.key === COLUMN_KEY_MAP[header] ? (
                     sortConfig.direction === "asc" ? (
                       <FaSortUp />
                     ) : (
@@ -154,6 +178,7 @@ export default function CampaignTable() {
                 </div>
               </th>
             ))}
+            <th className="p-4">ACTION</th>
           </tr>
         </thead>
         <tbody>
@@ -166,21 +191,27 @@ export default function CampaignTable() {
                   onChange={() => toggleRowSelection(row.id)}
                 />
               </td>
-              <td className="">{row.advocates}</td>
-              <td className="">{row.email}</td>
-              <td className="">{row.paymentMethod}</td>
-              <td className="">${row.amount.toFixed(2)}</td>
-              <td className="">{row.date}</td>
-              <td>
+              <td className="p-4">{row.campaignId}</td>
+              <td className="p-4">{row.title}</td>
+              <td className="p-4">{row.duration}</td>
+              <td className="p-4">{row.brand}</td>
+              <td className="p-4">{row.category}</td>
+              <td className="p-4">{row.commission}</td>
+              <td className="p-4">
                 <span
-                  className={` font-semibold ${
+                  className={`font-semibold ${
                     row.status === "Pending"
-                      ? "text-[#F0AD4E] bg-[#FCEFDC] py-2 px-4 rounded"
-                      : "text-[#22BB33] bg-[#D3F1D6] py-2 px-4 rounded"
-                  }`}
+                      ? "text-[#F0AD4E] bg-[#FCEFDC]"
+                      : "text-[#22BB33] bg-[#D3F1D6]"
+                  } py-2 px-4 rounded`}
                 >
                   {row.status}
                 </span>
+              </td>
+              <td className="p-4">
+                <button className="bg-blue-500 text-white rounded px-3 py-1">
+                  View
+                </button>
               </td>
             </tr>
           ))}
