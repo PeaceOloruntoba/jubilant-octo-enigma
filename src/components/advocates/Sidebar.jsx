@@ -25,9 +25,9 @@ export default function Sidebar({ expanded, setExpanded }) {
          
           <button
             onClick={() => setExpanded((curr) => !curr)}
-            className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 text-xl"
+            className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 text-xl "
           >
-            {expanded ? <FaAngleDoubleLeft /> : <FaAngleDoubleRight />}
+            {expanded ? <FaAngleDoubleLeft className="" /> : <FaAngleDoubleRight />}
           </button>
         </div>
         <div className="flex-1 pt-16">
