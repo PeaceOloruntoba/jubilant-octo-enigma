@@ -2,6 +2,7 @@ import Dashboard from "../pages/Dashboard";
 // import HomePage from "../pages/Homepage";
 import Insights from "../pages/Insights";
 import NotFound from "../pages/NotFound";
+import Inchat from "../pages/brands/Inchat";
 
 export const BrandsRoutes = [
   {
@@ -10,7 +11,7 @@ export const BrandsRoutes = [
   },
   {
     path: "/brands/chat",
-    element: <Dashboard />,
+    element: <Inchat />,
   },
   {
     path: "/brands/insights",
