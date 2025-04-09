@@ -43,7 +43,7 @@ const FILTER_OPTIONS = [
   { label: "All Time", value: "all" },
 ];
 
-export default function Payments() {
+export default function CampaignTable() {
   const [selectedFilter, setSelectedFilter] = useState("30d");
   const [data, setData] = useState(initialData);
   const [selectedRows, setSelectedRows] = useState([]);
@@ -88,10 +88,10 @@ export default function Payments() {
   };
 
   return (
-    <div className="p-4">
-      <div className="flex items-center justify-between bg-white dark:bg-black text-black dark:text-white">
+    <div className="p-4 border rounded-lg  shadow">
+      <div className="flex items-center justify-between bg-white dark:bg-black text-black dark:text-white ">
         <div className="flex flex-col">
-          <span className="text-[22px] font-medium">Payments</span>
+          <span className="text-[22px] font-medium">All Campaigns</span>
           <span className="text-[16px] text-[#9D9B9B]">Lorem ipsum dolor</span>
         </div>
         <div className="flex items-center gap-6">

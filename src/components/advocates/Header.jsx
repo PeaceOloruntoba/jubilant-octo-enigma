@@ -6,10 +6,11 @@ import { PiMoonLight } from "react-icons/pi";
 import { CiExport } from "react-icons/ci";
 import { loremLogo } from "../../assets";
 import Button from "../shared/Button";
+import LightDarkModeToggle from "../ui/LightDarkModeToggle";
 
 export default function Header() {
   return (
-    <div className="w- flex items-center justify-between m-2 p-2 border-b bg-white dark:bg-black">
+    <div className="w- flex items-center justify-between m-2 p-2 border-b bg-white dark:bg-black text-black dark:text-white">
       <div className="flex items-center gap-2">
         <img src={loremLogo} alt="" />
         <div className="flex flex-col">
@@ -37,10 +38,11 @@ export default function Header() {
       <div className="flex gap-4 items-center">
         <div className="flex gap-4 items-center border-r border-gray-200 px-4">
           <Button className="text-4xl" value={<FiRefreshCcw />} />
-          <Button
+          <LightDarkModeToggle />
+          {/* <Button
             className="bg-[#F5F3F3] text-2xl p-2 rounded-full"
             value={<PiMoonLight />}
-          />
+          /> */}
         </div>
         <Button
           value={
