@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaArrowUp, FaArrowDown, FaSyncAlt } from "react-icons/fa";
 import Header from "./Header";
+import Productable from "./Productable";
 
 const Intelligence = () => {
   const [revenue, setRevenue] = useState(51000);
@@ -19,9 +20,10 @@ const Intelligence = () => {
   const progressPercent = ((inProgress / target) * 100).toFixed(1);
 
   return (
-    <div className="min-h-screen bg-black text-white p-6 space-y-6">
-      {/* <div className="text-2xl font-semibold">AI Insights</div> */}
+    <div className="min-h-screen bg-gray-50 dark:bg-black p-6 space-y-6">
+      
       <Header generateInsights={generateInsights}/>
+
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="bg-red-600 text-white rounded-xl p-4 shadow-md">
           <div className="text-sm">Product Revenue</div>
@@ -77,15 +79,8 @@ const Intelligence = () => {
         </div>
       </div>
 
-      <div className="text-right">
-        <button
-          onClick={generateInsights}
-          className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700"
-        >
-          <FaSyncAlt /> Generate
-        </button>
-        <div className="text-xs text-gray-400 mt-1">Last Updated: 14:23</div>
-      </div>
+
+      <Productable/>
     </div>
   );
 };
