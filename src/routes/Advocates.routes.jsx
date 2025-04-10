@@ -8,6 +8,8 @@ import Inchat from "../pages/advocates/Inchat";
 import BrandsprofilePage from "../pages/advocates/BrandsprofilePage.jsx";
 
 import Inacademy from "../pages/advocates/Inacademy.jsx";
+
+import Intelligencepage from "../pages/advocates/Intelligencepage.jsx";
 export const AdvocatesRoutes = [
   {
     path: "/advocates/",
@@ -27,6 +29,12 @@ export const AdvocatesRoutes = [
     path: "/advocates/insights",
     element: <Insights />,
   },
+
+  {
+    path: "/advocates/intelligence",
+    element: <Intelligencepage/>,
+  },
+
   {
     path: "/advocates/brands",
     element: <Brands/>,
