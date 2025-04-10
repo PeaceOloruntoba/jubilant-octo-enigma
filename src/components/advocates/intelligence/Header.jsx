@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaSyncAlt } from "react-icons/fa";
 
 
-const Header = () => {
+const Header = ({generateInsights}) => {
   const [loadedTime, setLoadedTime] = useState("");
 
   useEffect(() => {
