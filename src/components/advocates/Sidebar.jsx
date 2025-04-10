@@ -16,7 +16,7 @@ export default function Sidebar({ expanded, setExpanded }) {
         expanded ? "w-72" : "w-20"
       } transition-all duration-500 bg-white shadow-lg dark:bg-black text-black dark:text-white shadow-lg`}
     >
-      <nav className="h-full flex flex-col bg-white border-r shadow-sm dark:bg-black text-black dark:text-white ">
+      <nav className="h-full flex flex-col bg-white border-r shadow-sm dark:bg-black text-black dark:text-white overflow-y-auto  hide-scrollbar">
         <div className="p-4 pb-2 flex items-center justify-between">
           <img
             src={expanded ? logo : logoIcon}
@@ -25,9 +25,9 @@ export default function Sidebar({ expanded, setExpanded }) {
          
           <button
             onClick={() => setExpanded((curr) => !curr)}
-            className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 text-xl"
+            className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 text-xl "
           >
-            {expanded ? <FaAngleDoubleLeft /> : <FaAngleDoubleRight />}
+            {expanded ? <FaAngleDoubleLeft className="" /> : <FaAngleDoubleRight />}
           </button>
         </div>
         <div className="flex-1 pt-16">

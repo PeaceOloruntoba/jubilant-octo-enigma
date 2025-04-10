@@ -60,6 +60,7 @@ const COLUMN_KEY_MAP = {
   CATEGORY: "category",
   "COMMISSION RATE": "commission",
   STATUS: "status",
+  ACTION: "",
 };
 
 export default function CampaignTable() {
@@ -148,7 +149,7 @@ export default function CampaignTable() {
         </div>
       </div>
 
-      <table className="w-full border-collapse rounded-lg mt-4">
+      <table className="w-full border-collapse rounded-lg mt-4 overflow-x-auto">
         <thead>
           <tr className="border-b text-left">
             <th className="p-4">
@@ -178,7 +179,7 @@ export default function CampaignTable() {
                 </div>
               </th>
             ))}
-            <th className="p-4">ACTION</th>
+            {/* <th className="p-4">ACTION</th> */}
           </tr>
         </thead>
         <tbody>
