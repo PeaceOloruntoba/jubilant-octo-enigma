@@ -1,7 +1,7 @@
 import React from 'react'
-import Analytics from '../components/brands/insights/Analytics';
-import InsightChart from '../components/brands/insights/components/InsightChart';
-import Top from '../components/brands/insights/Top';
+import Analytics from '../../components/brands/insights/Analytics';
+import InsightChart from '../../components/brands/insights/components/InsightChart';
+import Top from '../../components/brands/insights/top';
 
 export default function Insights() {
   return <div className="flex flex-col gap-8 p-8">

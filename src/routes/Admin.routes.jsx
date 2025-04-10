@@ -1,6 +1,6 @@
 import Dashboard from "../pages/Dashboard";
 // import HomePage from "../pages/Homepage";
-import Insights from "../pages/Insights";
+import Insights from "../pages/brands/Insights";
 import NotFound from "../pages/NotFound";
 
 export const AdminRoutes = [

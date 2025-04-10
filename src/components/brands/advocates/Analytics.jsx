@@ -17,7 +17,7 @@ export default function Analytics() {
     <div>
       <div className="flex items-center justify-between text-[#757474] text-lg">
         <span className="text-sectext text-[22px] font-[500]">
-          Advocates
+          !NSights (Analytics)
         </span>
         <div className="flex items-center gap-4">
           <span>Last updated {loadedTime}</span>
