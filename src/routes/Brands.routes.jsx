@@ -3,6 +3,7 @@ import Dashboard from "../pages/Dashboard";
 import Insights from "../pages/brands/Insights.jsx";
 import Inchat from "../pages/brands/Inchat";
 import Advocates from "../pages/brands/advocates.jsx";
+import Campaigns from "../pages/brands/campaigns.jsx"
 import NotFound from "../pages/NotFound";
 
 export const BrandsRoutes = [
@@ -26,6 +27,11 @@ export const BrandsRoutes = [
   {
     path: "/brands/advocates",
     element: <Advocates/>,
+  },
+
+  {
+    path: "/brands/campaigns",
+    element: <Campaigns/>,
   },
 
 

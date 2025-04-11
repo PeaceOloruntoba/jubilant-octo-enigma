@@ -1,14 +1,14 @@
 import React from 'react'
 import Analytics from '../../components/brands/insights/Analytics';
 // import InsightChart from '../../components/brands/insights/components/InsightChart';
-import AdvocatesList from '../../components/brands/advocates/AdvocatesList';
+import CampaignsList from '../../components/brands/campaigns/CampaignsList';
 
 
-export default function Advocates() {
+export default function campaigns() {
   return <div className="flex flex-col gap-8 p-8">
     <Analytics />
     {/* <InsightChart /> */}
-    <AdvocatesList />
+    <CampaignsList />
   </div>;
 }
 

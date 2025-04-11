@@ -35,7 +35,7 @@ export default function Sidebar({ expanded, setExpanded }) {
               <SidebarItem to="/brands/" text="Dashboard" icon="🏠" />
               <SidebarItem to="/brands/insights" text="Insights" icon="📊" />
               <SidebarItem to="/brands/chat" text="Chat" icon="💬" />
-              <SidebarItem to="/brands/Campaigns" text="Campaigns" icon="🛒" />
+              <SidebarItem to="/brands/products" text="Products & Sales" icon="🛒" />
               <SidebarItem to="/brands/advocates" text="Advocates" icon="🤝" />
               <SidebarItem to="/brands/intelligence" text="Intelligence" icon="🧠" />
               <SidebarItem to="/brands/payouts" text="Payouts" icon="💰" />
